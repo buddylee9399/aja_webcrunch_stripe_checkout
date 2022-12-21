@@ -1,0 +1,47 @@
+<div id="<%= dom_id subscription %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Plan:</strong>
+    <%= subscription.plan_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Customer:</strong>
+    <%= subscription.customer_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= subscription.user_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= subscription.status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Interval:</strong>
+    <%= subscription.interval %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subscription:</strong>
+    <%= subscription.subscription_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Current period start:</strong>
+    <%= subscription.current_period_start %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Current period end:</strong>
+    <%= subscription.current_period_end %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this subscription", subscription, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this subscription', edit_subscription_path(subscription), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
